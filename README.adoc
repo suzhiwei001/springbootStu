@@ -15,17 +15,4 @@
     5.1、静态定时任务
     5.2、动态定时任务
     5.3、多线程定时任务
-6、整合mybatis-generator-maven-plugin自动代码生成插件
-    6.1、导入相关的依赖jar及插件
-         配置相应的generatorConfig.xml
-        6.1.1、运行方式一（）生成了很多英文注释，不太好，使用第二种方式改进
-           此方式需要注释掉generatorConfig.xml中的<commentGenerator type="com.szw.springbootdemosu.generator_code.util.CommentGenerator">
-           运行方式：<!-- 在Maven->mybatis-generrator双击执行->查看生成的代码 -->
-        6.1.2、运行方式二、
-           在com.szw.springbootdemosu.generator_code.util文件：
-                CommentGenerator 重写原方法，改为中文注释
-                GeneratorUtil    运行此类生成代码
-    6.2、本项目中,生成文件的路径地址
-         dao||mapper.java->     com.szw.springbootdemosu.generator_code.dao_mapper
-         po ||实体->             com.szw.springbootdemosu.generator_code.entity
-         mapper.xml||sql->      E:/springTest/springBootTest/src/main/resources/mapping
+6、
