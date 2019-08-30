@@ -1,0 +1,31 @@
+1、根据https://baijiahao.baidu.com/s?id=1623648034778672046&wfr=spider&for=pc进行项目搭建步骤
+2、建了HelloWorld.java 进行简单的web自测
+3、修改文件application.yml文件
+    3.1、项目端口号配置9999
+    3.2、测试普通 pojo 与 配置文件 的映射
+        3.2.1、在配置文件中添加属性
+        3.2.2、创建配置包，创建java类-Person，类中添加相应的注解
+            3.2.2.1、需要在pom中增加导入配置文件处理器，配置文件进行绑定就会有提示
+        3.2.3、在测试文件中进行测试
+4、集成mybatis https://blog.csdn.net/iku5200/article/details/82856621
+    4.1、导入相应的jar
+         在yml文件做相应的配置
+         准备数据：数据库-----mapper.xml-----pojo-----mapper.java 进行测试
+5、定时任务 https://www.cnblogs.com/mmzs/p/10161936.html
+    5.1、静态定时任务
+    5.2、动态定时任务
+    5.3、多线程定时任务
+6、整合mybatis-generator-maven-plugin自动代码生成插件
+    6.1、导入相关的依赖jar及插件
+         配置相应的generatorConfig.xml
+        6.1.1、运行方式一（）生成了很多英文注释，不太好，使用第二种方式改进
+           此方式需要注释掉generatorConfig.xml中的<commentGenerator type="com.szw.springbootdemosu.generator_code.util.CommentGenerator">
+           运行方式：<!-- 在Maven->mybatis-generrator双击执行->查看生成的代码 -->
+        6.1.2、运行方式二、
+           在com.szw.springbootdemosu.generator_code.util文件：
+                CommentGenerator 重写原方法，改为中文注释
+                GeneratorUtil    运行此类生成代码
+    6.2、本项目中,生成文件的路径地址
+         dao||mapper.java->     com.szw.springbootdemosu.generator_code.dao_mapper
+         po ||实体->             com.szw.springbootdemosu.generator_code.entity
+         mapper.xml||sql->      E:/springTest/springBootTest/src/main/resources/mapping

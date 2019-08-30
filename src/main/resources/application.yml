@@ -1,0 +1,26 @@
+#项目端口号配置
+server:
+  port: 9999
+#测试普通pojo与配置文件的映射
+person:
+  name: hello
+  age: 18
+spring:
+  profiles:
+    active: dev
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/xyy_saas_clinic_purchase?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis:
+  mapper-locations: classpath:mapping/*Mapping.xml
+  type-aliases-package: com.szw.springbootdemosu.po
+logging:
+  level:
+    com:
+      szw:
+        springbootdemosu:
+          mapper: debug
+user:
+  name: suzhiwei
