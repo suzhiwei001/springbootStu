@@ -1,6 +1,5 @@
 package com.szw.springbootdemosu;
 
-import com.szw.springbootdemosu.config.Person;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
