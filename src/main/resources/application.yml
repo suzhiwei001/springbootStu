@@ -1,4 +1,3 @@
-#ÏîÄ¿¶Ë¿ÚºÅÅäÖÃ
 server:
   port: 9999
 spring:
@@ -9,9 +8,12 @@ spring:
     password: root
     url: jdbc:mysql://localhost:3306/xyy_saas_clinic_purchase?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
     driver-class-name: com.mysql.cj.jdbc.Driver
-mybatis:
-  mapper-locations: classpath:mapping/*Mapping.xml
-  type-aliases-package: com.szw.springbootdemosu.po
+mybatis-plus:
+  mapper-locations:
+    classpath: /mapper/*Mapper.xml
+  mybatis-plus:
+    typeAliasesPackage: com.szw.springbootdemosu.po
+
 logging:
   level:
     com:
