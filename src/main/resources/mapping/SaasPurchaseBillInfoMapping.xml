@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.szw.springbootdemosu.mapper.SaasPurchaseBillInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.szw.springbootdemosu.po.SaasPurchaseBillInfo" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="parent_bill_no" property="parentBillNo" jdbcType="VARCHAR" />
+    <result column="bill_no" property="billNo" jdbcType="VARCHAR" />
+    <result column="bill_time" property="billTime" jdbcType="TIMESTAMP" />
+    <result column="product_kind" property="productKind" jdbcType="INTEGER" />
+    <result column="received_time" property="receivedTime" jdbcType="TIMESTAMP" />
+    <result column="bill_type" property="billType" jdbcType="VARCHAR" />
+    <result column="supplier_no" property="supplierNo" jdbcType="VARCHAR" />
+    <result column="supplier_name" property="supplierName" jdbcType="VARCHAR" />
+    <result column="review_user" property="reviewUser" jdbcType="VARCHAR" />
+    <result column="billing_user" property="billingUser" jdbcType="VARCHAR" />
+    <result column="tax_amount_sum" property="taxAmountSum" jdbcType="DECIMAL" />
+    <result column="discount" property="discount" jdbcType="DECIMAL" />
+    <result column="price_after_discount" property="priceAfterDiscount" jdbcType="DECIMAL" />
+    <result column="price_discounted" property="priceDiscounted" jdbcType="DECIMAL" />
+    <result column="arrival_temperature" property="arrivalTemperature" jdbcType="DECIMAL" />
+    <result column="carrier_unit" property="carrierUnit" jdbcType="VARCHAR" />
+    <result column="shipment" property="shipment" jdbcType="VARCHAR" />
+    <result column="departure_time" property="departureTime" jdbcType="TIMESTAMP" />
+    <result column="transport_mode" property="transportMode" jdbcType="VARCHAR" />
+    <result column="remarks" property="remarks" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="VARCHAR" />
+    <result column="create_user" property="createUser" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_user" property="updateUser" jdbcType="VARCHAR" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="yn" property="yn" jdbcType="TINYINT" />
+    <result column="upload" property="upload" jdbcType="TINYINT" />
+    <result column="receiving_state" property="receivingState" jdbcType="TINYINT" />
+    <result column="purchase_bill_no" property="purchaseBillNo" jdbcType="VARCHAR" />
+    <result column="base_version" property="baseVersion" jdbcType="VARCHAR" />
+    <result column="organsign" property="organsign" jdbcType="VARCHAR" />
+    <result column="guid" property="guid" jdbcType="VARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="com.szw.springbootdemosu.po.SaasPurchaseBillInfo" >
+    <selectKey resultType="java.lang.Integer" keyProperty="id" order="BEFORE" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into saas_purchase_bill_info (id, parent_bill_no, bill_no, 
+      bill_time, product_kind, received_time, 
+      bill_type, supplier_no, supplier_name, 
+      review_user, billing_user, tax_amount_sum, 
+      discount, price_after_discount, price_discounted, 
+      arrival_temperature, carrier_unit, shipment, 
+      departure_time, transport_mode, remarks, 
+      status, create_user, create_time, 
+      update_user, update_time, yn, 
+      upload, receiving_state, purchase_bill_no, 
+      base_version, organsign, guid
+      )
+    values (#{id,jdbcType=INTEGER}, #{parentBillNo,jdbcType=VARCHAR}, #{billNo,jdbcType=VARCHAR}, 
+      #{billTime,jdbcType=TIMESTAMP}, #{productKind,jdbcType=INTEGER}, #{receivedTime,jdbcType=TIMESTAMP}, 
+      #{billType,jdbcType=VARCHAR}, #{supplierNo,jdbcType=VARCHAR}, #{supplierName,jdbcType=VARCHAR}, 
+      #{reviewUser,jdbcType=VARCHAR}, #{billingUser,jdbcType=VARCHAR}, #{taxAmountSum,jdbcType=DECIMAL}, 
+      #{discount,jdbcType=DECIMAL}, #{priceAfterDiscount,jdbcType=DECIMAL}, #{priceDiscounted,jdbcType=DECIMAL}, 
+      #{arrivalTemperature,jdbcType=DECIMAL}, #{carrierUnit,jdbcType=VARCHAR}, #{shipment,jdbcType=VARCHAR}, 
+      #{departureTime,jdbcType=TIMESTAMP}, #{transportMode,jdbcType=VARCHAR}, #{remarks,jdbcType=VARCHAR}, 
+      #{status,jdbcType=VARCHAR}, #{createUser,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{updateUser,jdbcType=VARCHAR}, #{updateTime,jdbcType=TIMESTAMP}, #{yn,jdbcType=TINYINT}, 
+      #{upload,jdbcType=TINYINT}, #{receivingState,jdbcType=TINYINT}, #{purchaseBillNo,jdbcType=VARCHAR}, 
+      #{baseVersion,jdbcType=VARCHAR}, #{organsign,jdbcType=VARCHAR}, #{guid,jdbcType=VARCHAR}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.szw.springbootdemosu.po.SaasPurchaseBillInfo" >
+    update saas_purchase_bill_info
+    set parent_bill_no = #{parentBillNo,jdbcType=VARCHAR},
+      bill_no = #{billNo,jdbcType=VARCHAR},
+      bill_time = #{billTime,jdbcType=TIMESTAMP},
+      product_kind = #{productKind,jdbcType=INTEGER},
+      received_time = #{receivedTime,jdbcType=TIMESTAMP},
+      bill_type = #{billType,jdbcType=VARCHAR},
+      supplier_no = #{supplierNo,jdbcType=VARCHAR},
+      supplier_name = #{supplierName,jdbcType=VARCHAR},
+      review_user = #{reviewUser,jdbcType=VARCHAR},
+      billing_user = #{billingUser,jdbcType=VARCHAR},
+      tax_amount_sum = #{taxAmountSum,jdbcType=DECIMAL},
+      discount = #{discount,jdbcType=DECIMAL},
+      price_after_discount = #{priceAfterDiscount,jdbcType=DECIMAL},
+      price_discounted = #{priceDiscounted,jdbcType=DECIMAL},
+      arrival_temperature = #{arrivalTemperature,jdbcType=DECIMAL},
+      carrier_unit = #{carrierUnit,jdbcType=VARCHAR},
+      shipment = #{shipment,jdbcType=VARCHAR},
+      departure_time = #{departureTime,jdbcType=TIMESTAMP},
+      transport_mode = #{transportMode,jdbcType=VARCHAR},
+      remarks = #{remarks,jdbcType=VARCHAR},
+      status = #{status,jdbcType=VARCHAR},
+      create_user = #{createUser,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_user = #{updateUser,jdbcType=VARCHAR},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      yn = #{yn,jdbcType=TINYINT},
+      upload = #{upload,jdbcType=TINYINT},
+      receiving_state = #{receivingState,jdbcType=TINYINT},
+      purchase_bill_no = #{purchaseBillNo,jdbcType=VARCHAR},
+      base_version = #{baseVersion,jdbcType=VARCHAR},
+      organsign = #{organsign,jdbcType=VARCHAR},
+      guid = #{guid,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select id, parent_bill_no, bill_no, bill_time, product_kind, received_time, bill_type, 
+    supplier_no, supplier_name, review_user, billing_user, tax_amount_sum, discount, 
+    price_after_discount, price_discounted, arrival_temperature, carrier_unit, shipment, 
+    departure_time, transport_mode, remarks, status, create_user, create_time, update_user, 
+    update_time, yn, upload, receiving_state, purchase_bill_no, base_version, organsign, 
+    guid
+    from saas_purchase_bill_info
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select id, parent_bill_no, bill_no, bill_time, product_kind, received_time, bill_type, 
+    supplier_no, supplier_name, review_user, billing_user, tax_amount_sum, discount, 
+    price_after_discount, price_discounted, arrival_temperature, carrier_unit, shipment, 
+    departure_time, transport_mode, remarks, status, create_user, create_time, update_user, 
+    update_time, yn, upload, receiving_state, purchase_bill_no, base_version, organsign, 
+    guid
+    from saas_purchase_bill_info
+  </select>
+</mapper>
