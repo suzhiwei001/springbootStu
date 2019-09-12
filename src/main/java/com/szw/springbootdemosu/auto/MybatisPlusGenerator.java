@@ -40,7 +40,7 @@ public class MybatisPlusGenerator {
         strategyConfig.setCapitalMode(true)
                 .setEntityLombokModel(false)
                 .setDbColumnUnderline(true)
-                .setNaming(NamingStrategy.underline_to_camel);
+                .setNaming(NamingStrategy.underline_to_camel).setInclude("saas_purchase_bill_info");
         config.setActiveRecord(false).setEnableCache(false).setAuthor("suzhiwei")
         //指定输出文件夹位置
         .setOutputDir("E:\\springTest\\springBootTest\\src\\main\\java")
