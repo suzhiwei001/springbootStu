@@ -26,7 +26,7 @@ spring:
       druid.stat.mergeSql: true
   redis:
     host: 123
-    password: C2NJd7e6ffpyqe52
+    password: 123
     port: 50001
     timeout: 3000
     pool:
