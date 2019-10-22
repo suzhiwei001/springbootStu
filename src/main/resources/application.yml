@@ -24,6 +24,16 @@ spring:
     filters: stat,wall,log4j
     connectionProperties:
       druid.stat.mergeSql: true
+  redis:
+    host: db1-saas-dev.redis.ybm100.top
+    password: C2NJd7e6ffpyqe52
+    port: 50001
+    timeout: 3000
+    pool:
+      max-active: 8
+      max-idle: 8
+      min-idle: 0
+      max-wait: -1
 druid:
   stat:
     slowSqlMillis: 5000
