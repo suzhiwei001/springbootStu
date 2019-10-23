@@ -5,4 +5,13 @@
     3.2、测试普通 pojo 与 配置文件 的映射
         3.2.1、在配置文件中添加属性
 
+4、集成redis
+    4.1、在pom中引入        <dependency>
+                                <groupId>redis.clients</groupId>
+                                <artifactId>jedis</artifactId>
+                           </dependency>
+    4.2、yml中增加配置
+    4.3、config增加工具类
+    4.4、test中一个简单的测试
+
 

@@ -25,8 +25,8 @@ spring:
     connectionProperties:
       druid.stat.mergeSql: true
   redis:
-    host: db1-saas-dev.redis.ybm100.top
-    password: C2NJd7e6ffpyqe52
+    host: 123
+    password: 123
     port: 50001
     timeout: 3000
     pool:
