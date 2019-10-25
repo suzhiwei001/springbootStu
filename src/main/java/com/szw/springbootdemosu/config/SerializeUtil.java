@@ -38,6 +38,26 @@ public class SerializeUtil {
         }
         return null;
     }
+    // 反序列化
+    public static Object deSeialize(byte[] bytes, Class clazz) {
+        Object result = null;
+        if (bytes != null) {
+            ByteArrayInputStream byteArrayOutputStream = null;
+            try {
+                byteArrayOutputStream = new ByteArrayInputStream(bytes);
+                ObjectInputStream objectInputStream = new ObjectInputStream(byteArrayOutputStream);
+                result = objectInputStream.readObject();
+            } catch (Exception e) {
+                e.printStackTrace();
+
+            }
+            /*
+             * if (result != null) { result =
+             * JsonTransUtil.jsonToBean(result.toString(), clazz); }
+             */
+        }
+        return result;
+    }
 
     /**
      * 反序列化对象

@@ -310,8 +310,8 @@ public class JedisPageUtil {
 	}
 
 	private static final String LOCK_SUCCESS = "OK";
-	private static final String SET_IF_NOT_EXIST = "NX";
-	private static final String SET_WITH_EXPIRE_TIME = "PX";
+	private static final String SET_IF_NOT_EXIST = "NX";//key不存在时，我们进行set操作
+	private static final String SET_WITH_EXPIRE_TIME = "PX";//我们要给这个key加一个过期的设置，具体时间由第五个参数决定
 
 	/**
 	 * 尝试获取分布式锁
@@ -345,6 +345,4 @@ public class JedisPageUtil {
 		}
 		return false;
 	}
-
-
 }
