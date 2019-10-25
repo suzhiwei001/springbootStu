@@ -6,3 +6,5 @@
         3.2.1、在配置文件中添加属性
 
 
+集成webSocket
+https://blog.csdn.net/moshowgame/article/details/80275084
