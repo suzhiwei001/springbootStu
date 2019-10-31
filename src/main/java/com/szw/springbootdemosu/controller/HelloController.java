@@ -11,6 +11,8 @@ public class HelloController {
     SaasPurchaseBillDetialService saasPurchaseBillDetialService;
     @RequestMapping("/sayHello")
     public String hello(){
+        System.out.println("123");
+        System.out.println("124");
         return "hello world - "+saasPurchaseBillDetialService.querySaasPurchaseBillDetialIp(2);
     }
 }
