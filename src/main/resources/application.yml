@@ -1,4 +1,4 @@
-#ÏîÄ¿¶Ë¿ÚºÅÅäÖÃ
+#ï¿½ï¿½Ä¿ï¿½Ë¿Úºï¿½ï¿½ï¿½ï¿½ï¿½
 server:
   port: 9999
 spring:
@@ -12,9 +12,7 @@ spring:
 mybatis:
   mapper-locations: classpath:mapping/*Mapping.xml
   type-aliases-package: com.szw.springbootdemosu.po
+##logging
 logging:
-  level:
-    com:
-      szw:
-        springbootdemosu:
-          mapper: debug
+  config: classpath:logback-spring.xml
+  file: saas_order_ms
