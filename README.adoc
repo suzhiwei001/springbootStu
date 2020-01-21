@@ -6,3 +6,25 @@
         3.2.1、在配置文件中添加属性
 
 
+
+2020-01-21 redis test
+安装 启动
+https://www.cnblogs.com/jylee/p/9844965.html
+
+项目中使用
+
+引入
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+            <version>2.0.4.RELEASE</version>
+        </dependency>
+工具类 使用
+
+
+
+
