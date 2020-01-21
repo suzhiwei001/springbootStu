@@ -28,17 +28,19 @@ public class HelloController {
     public String redisTest(String organSign,String sourcePref){
         List<String> inventoryRollBackKeys = new ArrayList<>();
 
+        //查询
         String value = redisCacheUtil.getCacheObject(organSign+sourcePref);
         if(!StringUtils.isEmpty(value)){
             System.out.println("key存在");
         }else{
+            //设置
             redisCacheUtil.setCacheObject(organSign+sourcePref, "redis-test", 15, TimeUnit.MINUTES);
             inventoryRollBackKeys.add(organSign+sourcePref);
         }
-
-        if(inventoryRollBackKeys.size()>0){
+        //删除
+/*        if(inventoryRollBackKeys.size()>0){
             redisCacheUtil.deleteKey(inventoryRollBackKeys.toArray(new String[inventoryRollBackKeys.size()]));
-        }
+        }*/
 
 
 
