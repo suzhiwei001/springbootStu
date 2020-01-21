@@ -35,7 +35,8 @@ public class HelloController {
             redisCacheUtil.setCacheObject(organSign+sourcePref, "redis-test", 15, TimeUnit.MINUTES);
             inventoryRollBackKeys.add(organSign+sourcePref);
         }
-        if(!StringUtils.isEmpty(value)){
+
+        if(inventoryRollBackKeys.size()>0){
             redisCacheUtil.deleteKey(inventoryRollBackKeys.toArray(new String[inventoryRollBackKeys.size()]));
         }
 
