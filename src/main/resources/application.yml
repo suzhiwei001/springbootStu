@@ -1,4 +1,4 @@
-#ÏîÄ¿¶Ë¿ÚºÅÅäÖÃ
+#ï¿½ï¿½Ä¿ï¿½Ë¿Úºï¿½ï¿½ï¿½ï¿½ï¿½
 server:
   port: 9999
 spring:
@@ -18,3 +18,13 @@ logging:
       szw:
         springbootdemosu:
           mapper: debug
+redis:
+  host: localhost
+  password:
+  port: 6379
+  timeout: 3000
+  pool:
+    max-active: 8
+    max-idle: 8
+    min-idle: 0
+    max-wait: -1

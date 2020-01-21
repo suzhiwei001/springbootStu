@@ -10,6 +10,11 @@
 2020-01-21 redis test
 安装 启动
 https://www.cnblogs.com/jylee/p/9844965.html
+安装命令：redis-server.exe --service-install redis.windows.conf --loglevel verbose
+
+启动服务命令：redis-server.exe  --service-start
+
+关闭服务命令：redis-server.exe  --service-stop
 
 项目中使用
 
