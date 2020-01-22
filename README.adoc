@@ -36,3 +36,6 @@ RedisConfig工具类 为了解觉jedis 序列化问题 比如\xac\xed\x00\x05t\x
 redis lua脚本使用
 https://blog.csdn.net/fsw4848438/article/details/81540495
 
+学习
+https://www.jianshu.com/u/c4206331771c
+
