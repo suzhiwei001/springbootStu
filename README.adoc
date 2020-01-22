@@ -33,6 +33,6 @@ https://www.cnblogs.com/jylee/p/9844965.html
 
 RedisConfig工具类 为了解觉jedis 序列化问题 比如\xac\xed\x00\x05t\x00\a这种类型的数据（参考：https://blog.csdn.net/peterpan_pyy/article/details/95888670）
 
-
-
+redis lua脚本使用
+https://blog.csdn.net/fsw4848438/article/details/81540495
 
