@@ -17,4 +17,6 @@ public class User implements Serializable {
     private String sex;
     private String adress;
     private String education;
+    private Long sort;
+    private String direction;//方向
 }

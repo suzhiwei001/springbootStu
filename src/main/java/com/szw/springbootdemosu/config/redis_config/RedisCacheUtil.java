@@ -104,28 +104,6 @@ public class RedisCacheUtil {
     }
 
     /**
-     * 缓存List数据[从右边放]
-     * @param key
-     * @param dataList
-     * @param <T>
-     * @return
-     */
-    @Deprecated
-    public <T> ListOperations<String, T> setBvCacheListAtRight(String key, List<T> dataList) {
-        if (true) {
-            return null;
-        }
-        ListOperations listOperation = redisTemplate.opsForList();
-        if (null != dataList) {
-            int size = dataList.size();
-            for (int i = 0; i < size; i++) {
-                listOperation.rightPush(key, dataList.get(i));
-            }
-        }
-        return listOperation;
-    }
-
-    /**
      * 获得缓存的list对象[从左边取]
      * @param key 缓存的键值
      * @return 缓存键值对应的数据
