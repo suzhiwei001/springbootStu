@@ -13,7 +13,10 @@ import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -124,5 +127,28 @@ public class redisTest {
             users.add(JSON.toJSONString(user));
         }
         return users;
+    }
+
+    @Test
+    public void dayatest(){
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+        //默认收集7天的销售日报数据
+        int dateNum = 43;
+        int num = dateNum;
+        for (int i = 1; i <= dateNum; i++) {
+            Calendar calendar = Calendar.getInstance();
+            calendar.set(Calendar.DAY_OF_YEAR, calendar.get(Calendar.DAY_OF_YEAR) - i);
+            Date today = calendar.getTime();
+            String result = format.format(today);
+            if(i==1){
+                String endTime=result;
+                System.out.println("endTime:"+endTime);
+
+            }
+            if(i == num){
+                String startTime=result;
+                System.out.println("startTime:"+startTime);
+            }
+        }
     }
 }
